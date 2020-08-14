@@ -13,7 +13,7 @@ namespace GigHub.Migrations
             DropIndex("dbo.Gigs", new[] { "Genre_Id" });
             AlterColumn("dbo.Genres", "Name", c => c.String(nullable: false, maxLength: 255));
             AlterColumn("dbo.Gigs", "Venue", c => c.String(nullable: false, maxLength: 255));
-            AlterColumn("dbo.Gigs", "Artist_Id", c => c.String(nullable: false, maxLength: 128));
+            AlterColumn("dbo.Gigs", "Artist_Id", c => c.String(nullable: false, maxLength: 128)); 
             AlterColumn("dbo.Gigs", "Genre_Id", c => c.Byte(nullable: false));
             CreateIndex("dbo.Gigs", "Artist_Id");
             CreateIndex("dbo.Gigs", "Genre_Id");
